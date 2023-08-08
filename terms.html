@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/category.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/popularProducts.css" />
+    <title>Green Paradise</title>
+  </head>
+  <body>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light"></nav>
+
+    <section id="main" class="mt-5">
+        <div class="container">
+            <h1 class="heading">
+                Terms & Conditions
+            </h1>
+            <p class="mt-2">
+    
+    <h2>1. Use of Cookies</h2>
+    <p>Green Paradise uses cookies to enable a personalized user experience and track usage patterns on our website. By using Green Paradise's website, you consent to the use of cookies in accordance with our Privacy Policy.</p>
+    
+    <h2>2. License</h2>
+    <p>Unless otherwise stated, Green Paradise and/or its licensors own the intellectual property rights for all material on Green Paradise. All intellectual property rights are reserved. You may view and/or print pages from https://www.greenparadise.com for your own personal use subject to restrictions set in these terms and conditions.</p>
+    
+    <h2>3. User Comments</h2>
+    <p>Certain parts of this website offer the opportunity for users to post and exchange opinions, information, material, and data ('Comments') in areas of the website. Green Paradise does not screen, edit, publish, or review Comments prior to their appearance on the website and Comments do not reflect the views or opinions of Green Paradise, its agents, or affiliates. Comments reflect the view and opinion of the person who posts such view or opinion. To the extent permitted by applicable laws, Green Paradise shall not be responsible or liable for the Comments or for any loss cost, liability, damages, or expenses caused and or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+    
+    <h2>4. Hyperlinking to our Content</h2>
+    <p>You may not create a link to any page of this website without our prior written consent. If you do create a link to a page of this website, you do so at your own risk and the exclusions and limitations set out above will apply to your use of this website by linking to it.</p>
+    
+    <h2>5. Disclaimer</h2>
+    <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website (including, without limitation, any warranties implied by law in respect of satisfactory quality, fitness for purpose, and/or the use of reasonable care and skill).</p>
+    
+    <p>These Terms and Conditions are effective as of [Date].</p>
+    
+    <h2>Contact Information:</h2>
+    <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:contact@greenparadise.com">contact@greenparadise.com</a>.</p>
+    
+    <p>By accessing this website, you agree to abide by these terms and conditions.</p>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer py-3 bg-light mt-5"></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
+<script type="module">
+  import footer from "./components/footer.js";
+  import nav from "./components/nav.js";
+  import popularProductsCarousel from "../components/popularProducts.js";
+  popularProductsCarousel();
+
+  document.querySelector("footer").innerHTML = footer();
+  document.querySelector("nav").innerHTML = nav();
+</script>

@@ -14,29 +14,31 @@ let footer = () => {
         <ul style="list-style: none" class="p-0 mt-0">
           <li><a href="allProducts.html"> All Products </a></li>
           <li><a href="#popular-products"> Popular Products </a></li>
-          <li><a href=""> Planters </a></li>
-          <li><a href=""> Befinner Friendly </a></li>
-          <li><a href=""> Faux </a></li>
-          <li><a href=""> Flowering </a></li>
+          <li id="Planters"><a href=""> Planters </a></li>
+          <li id="Easy-Care"><a href=""> Befinner Friendly </a></li>
+          <li id="Faux"><a href=""> Faux </a></li>
+          <li id="Flowering"><a href=""> Flowering </a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6">
         <h6>About</h6>
         <ul style="list-style: none" class="p-0 mt-0">
-          <li><a href="#about"> About Us </a></li>
-          <li><a href="#testimonials"> Testimonials </a></li>
+          <li><a href="index.html#about"> About Us </a></li>
+          <li><a href="index.html#testimonials"> Testimonials </a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6">
         <h6>Info</h6>
         <ul style="list-style: none" class="p-0 mt-0">
-          <li><a href="allProducts.html"> Privacy Policy </a></li>
-          <li><a href="#popular-products"> Terms & Conditions </a></li>
-          <li><a href=""> Returns & Refunds </a></li>
+          <li><a href="privacy.html"> Privacy Policy </a></li>
+          <li><a href="terms.html"> Terms & Conditions </a></li>
+          <li><a href="refund.html"> Returns & Refunds </a></li>
         </ul>
       </div>
     </div>
   </div>`
 }
+
+
 
 export default footer;

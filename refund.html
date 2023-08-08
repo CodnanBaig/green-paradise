@@ -39,11 +39,6 @@
     <link rel="stylesheet" href="./styles/popularProducts.css" />
     <title>Green Paradise</title>
   </head>
-  <style>
-    .active > a {
-      background-color: #486e00 !important;
-    }
-  </style>
   <body>
     <div class="background">
       <span></span>
@@ -55,65 +50,28 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-lg bg-light"></nav>
 
-    <section id="top">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div
-              class="hero-info d-flex flex-column justify-content-center align-items-start"
-            >
-              <h1 class="heading">Planters</h1>
-              <p>
-                20% of the profit goes to help the Armed Forces of
-                <span style="color: rgb(129, 173, 255)">Ukr</span
-                ><span style="color: #b9b900">aine</span>
-              </p>
-              <br />
-              <button class="catalog-btn btn mb-3">
-                <a href="allProducts.html" style="color: white"> Catalog</a>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 p-0">
-            <img
-              src="https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format"
-              class="img-fluid hero"
-              id="hero-img"
-              alt=""
-            />
-          </div>
+    <section id="main" class="mt-5">
+        <div class="container">
+            <h1 class="heading">
+                Refunds & Returns
+            </h1>
+            <p class="mt-2">
+    
+                <h2>1. Refund Policy</h2>
+    <p>We want you to be completely satisfied with your purchase from Green Paradise. If you're not satisfied for any reason, you may return the item within 30 days of purchase for a full refund.</p>
+    
+    <h2>2. Return Process</h2>
+    <p>To initiate a return, please contact our customer service team at <a href="mailto:returns@greenparadise.com">returns@greenparadise.com</a>. We will provide you with a return label and instructions on how to return the item.</p>
+    
+    <h2>3. Conditions for Returns</h2>
+    <p>Items must be in new and unused condition to be eligible for a return. All original packaging and tags must be included. Once we receive the returned item, we will process your refund within [X] business days.</p>
+    
+    <p>This Refund and Return Policy is effective as of [Date].</p>
+    
+    <h2>Contact Information:</h2>
+    <p>If you have any questions or concerns about our Refund and Return Policy, please contact us at <a href="mailto:returns@greenparadise.com">returns@greenparadise.com</a>.</p>
+            </p>
         </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <div class="container">
-        <h1 class="heading">All <span id="all-cat"></span></h1>
-        <div id="list" class="row mt-5"></div>
-        <div class="col-12 d-flex justify-content-center">
-          <nav class="pagination-container mt-5 text-center">
-            <ul class="pagination" id="pagination">
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <section id="popular-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="heading">Popular Products</h1>
-          </div>
-        </div>
-        <div class="row mt-5 g-5">
-          <div class="col-12">
-            <div class="swiper-container">
-              <div class="swiper-wrapper" id="popular-products-container"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <footer class="footer py-3 bg-light mt-5"></footer>
@@ -127,4 +85,12 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
-<script type="module" src="./scripts/category.js"></script>
+<script type="module">
+  import footer from "./components/footer.js";
+  import nav from "./components/nav.js";
+  import popularProductsCarousel from "../components/popularProducts.js";
+  popularProductsCarousel();
+
+  document.querySelector("footer").innerHTML = footer();
+  document.querySelector("nav").innerHTML = nav();
+</script>

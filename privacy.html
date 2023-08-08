@@ -39,11 +39,6 @@
     <link rel="stylesheet" href="./styles/popularProducts.css" />
     <title>Green Paradise</title>
   </head>
-  <style>
-    .active > a {
-      background-color: #486e00 !important;
-    }
-  </style>
   <body>
     <div class="background">
       <span></span>
@@ -55,65 +50,28 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-lg bg-light"></nav>
 
-    <section id="top">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div
-              class="hero-info d-flex flex-column justify-content-center align-items-start"
-            >
-              <h1 class="heading">Planters</h1>
-              <p>
-                20% of the profit goes to help the Armed Forces of
-                <span style="color: rgb(129, 173, 255)">Ukr</span
-                ><span style="color: #b9b900">aine</span>
-              </p>
-              <br />
-              <button class="catalog-btn btn mb-3">
-                <a href="allProducts.html" style="color: white"> Catalog</a>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 p-0">
-            <img
-              src="https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format"
-              class="img-fluid hero"
-              id="hero-img"
-              alt=""
-            />
-          </div>
+    <section id="main" class="mt-5">
+        <div class="container">
+            <h1 class="heading">
+                Privacy Policy
+            </h1>
+            <p class="mt-2">
+    
+                <h2>1. Information We Collect</h2>
+                <p>Green Paradise collects personal information when you create an account, place an order, or sign up for our newsletter. This information may include your name, email address, shipping address, and payment information.</p>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect to process your orders, communicate with you, and improve our services. Your information is kept confidential and is never shared with third parties without your consent.</p>
+                
+                <h2>3. Security Measures</h2>
+                <p>Green Paradise takes the security of your personal information seriously. We use industry-standard encryption and security measures to protect your data from unauthorized access.</p>
+                
+                <p>This Privacy Policy is effective as of [Date].</p>
+                
+                <h2>Contact Information:</h2>
+                <p>If you have any questions or concerns about our Privacy Policy, please contact us at <a href="mailto:privacy@greenparadise.com">privacy@greenparadise.com</a>.</p>
+            </p>
         </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <div class="container">
-        <h1 class="heading">All <span id="all-cat"></span></h1>
-        <div id="list" class="row mt-5"></div>
-        <div class="col-12 d-flex justify-content-center">
-          <nav class="pagination-container mt-5 text-center">
-            <ul class="pagination" id="pagination">
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <section id="popular-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="heading">Popular Products</h1>
-          </div>
-        </div>
-        <div class="row mt-5 g-5">
-          <div class="col-12">
-            <div class="swiper-container">
-              <div class="swiper-wrapper" id="popular-products-container"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <footer class="footer py-3 bg-light mt-5"></footer>
@@ -127,4 +85,12 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
-<script type="module" src="./scripts/category.js"></script>
+<script type="module">
+  import footer from "./components/footer.js";
+  import nav from "./components/nav.js";
+  import popularProductsCarousel from "../components/popularProducts.js";
+  popularProductsCarousel();
+
+  document.querySelector("footer").innerHTML = footer();
+  document.querySelector("nav").innerHTML = nav();
+</script>
