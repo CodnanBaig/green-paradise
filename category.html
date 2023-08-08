@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/category.css">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/popularProducts.css" />
+    <title>Green Paradise</title>
+  </head>
+  <body>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light"></nav>
+
+    <section id="top">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div
+              class="hero-info d-flex flex-column justify-content-center align-items-start"
+            >
+              <h1 class="heading">Planters</h1>
+              <p>
+                20% of the profit goes to help the Armed Forces of
+                <span style="color: rgb(129, 173, 255)">Ukr</span
+                ><span style="color: #b9b900">aine</span>
+              </p>
+              <br />
+              <button class="catalog-btn btn mb-3">
+                <a href="allProducts.html" style="color: white"> Catalog</a>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+            <img
+              src="https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format"
+              class="img-fluid hero"
+              id="hero-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h1 class="heading">All <span id="all-cat"></span></h1>
+            <div id="list" class="row mt-5">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="popular-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="heading">Popular Products</h1>
+          </div>
+        </div>
+        <div class="row mt-5 g-5">
+          <div class="col-12">
+            <div class="swiper-container">
+              <div class="swiper-wrapper" id="popular-products-container">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-3 bg-light mt-5"></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
+<script type="module" src="./scripts/category.js"></script>

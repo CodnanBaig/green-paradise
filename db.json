@@ -5,6 +5,7 @@
             "id": 1,
             "price": 459,
             "category": "Planters",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format",
             "name": "Hyde",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -13,6 +14,7 @@
             "id": 2,
             "price": 359,
             "category": "Planters",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format",
             "name": "Money Tree",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -21,6 +23,7 @@
             "id": 3,
             "price": 259,
             "category": "Planters",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format",
             "name": "Grant",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -29,6 +32,7 @@
             "id": 4,
             "price": 359,
             "category": "Planters",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format",
             "name": "Fiddle Leaf",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -37,6 +41,7 @@
             "id": 5,
             "price": 459,
             "category": "Planters",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format",
             "name": "Snake Plant",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -44,7 +49,8 @@
             "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-cream_gloss-trio2.jpg?v=1681836393",
             "id": 6,
             "price": 259,
-            "category": "Easy-Care Plants",
+            "category": "Easy-Care",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format",
             "name": "Cream Gloss",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -52,7 +58,8 @@
             "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_hardy-houseplants-duo_hyde_cream.jpg?v=1672212474",
             "id": 7,
             "price": 559,
-            "category": "Easy-Care Plants",
+            "category": "Easy-Care",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format",
             "name": "Hardy",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -60,7 +67,8 @@
             "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_living-room-duo_variant_black.jpg?v=1672216374",
             "id": 8,
             "price": 659,
-            "category": "Easy-Care Plants",
+            "category": "Easy-Care",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format",
             "name": "Living Room",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -68,7 +76,8 @@
             "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Philodendron-Xanadu_Medium_Hyde_Cream.jpg?v=1687885294",
             "id": 9,
             "price": 259,
-            "category": "Easy-Care Plants",
+            "category": "Easy-Care",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format",
             "name": "Philodendron",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -76,7 +85,8 @@
             "img": "https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Medium-Snake-Moonshine_Medium_Hyde_Cream_Variant.jpg?v=1686664154",
             "id": 10,
             "price": 159,
-            "category": "Easy-Care Plants",
+            "category": "Easy-Care",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format",
             "name": "Snake Moonshine",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -85,6 +95,7 @@
             "id": 11,
             "price": 659,
             "category": "Flowering",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format",
             "name": "White Gloss",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -93,6 +104,7 @@
             "id": 12,
             "price": 359,
             "category": "Flowering",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format",
             "name": "Anthurium",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -101,6 +113,7 @@
             "id": 13,
             "price": 659,
             "category": "Flowering",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format",
             "name": "Bromeliad",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -109,6 +122,7 @@
             "id": 14,
             "price": 159,
             "category": "Flowering",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format",
             "name": "Orchid",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -117,6 +131,7 @@
             "id": 15,
             "price": 359,
             "category": "Flowering",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format",
             "name": "Piedmont",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -125,6 +140,7 @@
             "id": 16,
             "price": 459,
             "category": "Faux",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format",
             "name": "Kokedama",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -133,6 +149,7 @@
             "id": 17,
             "price": 259,
             "category": "Faux",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format",
             "name": "Ric Rac",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -141,6 +158,7 @@
             "id": 18,
             "price": 459,
             "category": "Faux",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format",
             "name": "Palm",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -149,6 +167,7 @@
             "id": 19,
             "price": 259,
             "category": "Faux",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format",
             "name": "Leaf Fig",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         },
@@ -157,6 +176,7 @@
             "id": 20,
             "price": 359,
             "category": "Faux",
+            "categoryImage": "https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format",
             "name": "Queen Anne",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
         }

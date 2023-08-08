@@ -1,6 +1,14 @@
 let nav = () => {
+  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
+  let cCount = document.getElementById("cartCount");
+
+  document.addEventListener("updateCartCount", (event) => {
+    cartCount = event.detail.cartCount;
+    cCount.innerText = cartCount;
+  });
+
   return `<div class="container">
-    <a class="navbar-brand" href="#">Green paradise</a>
+    <a class="navbar-brand" href="index.html">Green paradise</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -22,12 +30,12 @@ let nav = () => {
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="index.html#about">About</a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#delivery"
+            href="index.html#delivery"
             tabindex="-1"
             aria-disabled="true"
             >Delivery & Payment</a
@@ -49,14 +57,13 @@ let nav = () => {
     </ul>
   </div>
       <span class="navbar-text mx-2">
-        <span class="cart-count bg-success p-1 rounded-circle" style="color: white;">3</span>
-        <i class="fa-solid fa-shopping-cart"></i>
+        <span id="cartCount" class="cart-count bg-success p-1 rounded-pill" style="color: white;">${cartCount}</span>
+        <a style="color: black" href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
       </span>
       <span class="navbar-text mx-2">
-        <i class="fa-solid fa-search"></i>
+        <i  class="fa-solid fa-search"></i>
       </span>
     </div>
   </div>`;
 };
-
 export default nav;
