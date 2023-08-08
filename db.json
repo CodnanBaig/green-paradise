@@ -1,0 +1,164 @@
+{
+    "products": [
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_hyde-planter_gallery_medium_all_all_01.jpg?v=1686850328",
+            "id": 1,
+            "price": 459,
+            "category": "Planters",
+            "name": "Hyde",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_money-tree_gallery_small_all_all_03_fed0e22b-7fb3-424c-8801-046f087f590d.jpg?v=1686850547",
+            "id": 2,
+            "price": 359,
+            "category": "Planters",
+            "name": "Money Tree",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_grant-planter_gallery_medium_all_all_01.jpg?v=1686850366",
+            "id": 3,
+            "price": 259,
+            "category": "Planters",
+            "name": "Grant",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_medium-fiddle-leaf-fig_Momma-Pots_Mustard_Variant.jpg?v=1689972692",
+            "id": 4,
+            "price": 359,
+            "category": "Planters",
+            "name": "Fiddle Leaf",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_medium-snake-plant_Momma-Pots_Antique-Teal_Variant_e8924cc6-fefc-46c6-ab81-df6439823d1c.jpg?v=1690439273",
+            "id": 5,
+            "price": 459,
+            "category": "Planters",
+            "name": "Snake Plant",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-cream_gloss-trio2.jpg?v=1681836393",
+            "id": 6,
+            "price": 259,
+            "category": "Easy-Care Plants",
+            "name": "Cream Gloss",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_hardy-houseplants-duo_hyde_cream.jpg?v=1672212474",
+            "id": 7,
+            "price": 559,
+            "category": "Easy-Care Plants",
+            "name": "Hardy",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_living-room-duo_variant_black.jpg?v=1672216374",
+            "id": 8,
+            "price": 659,
+            "category": "Easy-Care Plants",
+            "name": "Living Room",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Philodendron-Xanadu_Medium_Hyde_Cream.jpg?v=1687885294",
+            "id": 9,
+            "price": 259,
+            "category": "Easy-Care Plants",
+            "name": "Philodendron",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Medium-Snake-Moonshine_Medium_Hyde_Cream_Variant.jpg?v=1686664154",
+            "id": 10,
+            "price": 159,
+            "category": "Easy-Care Plants",
+            "name": "Snake Moonshine",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-anthurium_coral.jpg?v=1680539003",
+            "id": 11,
+            "price": 659,
+            "category": "Flowering",
+            "name": "White Gloss",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-anthurium_pink.jpg?v=1680539203",
+            "id": 12,
+            "price": 359,
+            "category": "Flowering",
+            "name": "Anthurium",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-bromeliad_pink.jpg?v=1680539579",
+            "id": 13,
+            "price": 659,
+            "category": "Flowering",
+            "name": "Bromeliad",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_white.jpg?v=1681923981",
+            "id": 14,
+            "price": 159,
+            "category": "Flowering",
+            "name": "Orchid",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_pink.jpg?v=1680546299",
+            "id": 15,
+            "price": 359,
+            "category": "Flowering",
+            "name": "Piedmont",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_kokedama-plant_variant_all_01.jpg?v=1571677621",
+            "id": 16,
+            "price": 459,
+            "category": "Faux",
+            "name": "Kokedama",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Hanging-Ric-Rac_variant.jpg?v=1661446470",
+            "id": 17,
+            "price": 259,
+            "category": "Faux",
+            "name": "Ric Rac",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Palm-Tree_growpot.jpg?v=1684507189",
+            "id": 18,
+            "price": 459,
+            "category": "Faux",
+            "name": "Palm",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_faux-fiddle-leaf-fig_variant_large_grow-pot_none.jpg?v=1646839381",
+            "id": 19,
+            "price": 259,
+            "category": "Faux",
+            "name": "Leaf Fig",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        },
+        {
+            "img": "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527",
+            "id": 20,
+            "price": 359,
+            "category": "Faux",
+            "name": "Queen Anne",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum doloremque suscipit tempora excepturi maxime quasi molestiae, soluta similique ipsam laborum mollitia? Nisi, consectetur repudiandae nam dicta rerum tempora natus!"
+        }
+    ]
+}

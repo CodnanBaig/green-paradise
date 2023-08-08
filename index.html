@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Green Paradise</title>
+  </head>
+  <body>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Green paradise</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="allProducts.html"
+                >Catalog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#delivery"
+                tabindex="-1"
+                aria-disabled="true"
+                >Delivery & Payment</a
+              >
+            </li>
+          </ul>
+          <span class="navbar-text mx-2">
+            <i class="fa-solid fa-user-circle"></i>
+          </span>
+          <span class="navbar-text mx-2">
+            <span class="cart-count">3</span>
+            <i class="fa-solid fa-shopping-cart"></i>
+          </span>
+          <span class="navbar-text mx-2">
+            <i class="fa-solid fa-search"></i>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="top">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div
+              class="hero-info d-flex flex-column justify-content-center align-items-start"
+            >
+              <h1 class="heading">Create a green paradise right at home</h1>
+              <p>
+                20% of the profit goes to help the Armed Forces of
+                <span style="color: rgb(129, 173, 255)">Ukr</span
+                ><span style="color: #b9b900">aine</span>
+              </p>
+              <br />
+              <button class="catalog-btn btn mb-3">Catalog</button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+            <img
+              src="https://images.pexels.com/photos/4065156/pexels-photo-4065156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="img-fluid hero"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row r-0">
+              <div class="col-6">
+                <img
+                  src="https://images.pexels.com/photos/213727/pexels-photo-213727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  alt=""
+                />
+                <br />
+                <img
+                  src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  alt=""
+                />
+              </div>
+              <div class="col-6 p-0">
+                <img
+                  src="https://images.pexels.com/photos/4503827/pexels-photo-4503827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  style="height: 81%"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content mt-5">
+              <h1 class="heading">About us</h1>
+              <p>
+                We are a store of indoor plants for various types in Kylv.
+                Hundreds of different types of plants: from ficuses to ferns. We
+                love and cherish our plants from their very "birth", so they
+                definitely bring happiness and joy, love, and comfort to your
+                home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popular-products" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="heading">Popular Products</h1>
+          </div>
+          <div class="col-6">
+            <div class="d-inline-flex float-end m-3">
+              <button class="btn rounded-circle mx-2 btn-primary"><</button>
+              <button class="btn rounded-circle mx-2 btn-primary">></button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 g-5">
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body d-flex justify-content-between">
+                <div class="details">
+                  <h5 class="card-title">Product Name</h5>
+                  <p class="card-text">459RS</p>
+                </div>
+                <button class="btn btn-primary buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body d-flex justify-content-between">
+                <div class="details">
+                  <h5 class="card-title">Product Name</h5>
+                  <p class="card-text">459RS</p>
+                </div>
+                <button class="btn btn-primary buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body d-flex justify-content-between">
+                <div class="details">
+                  <h5 class="card-title">Product Name</h5>
+                  <p class="card-text">459RS</p>
+                </div>
+                <button class="btn btn-primary buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Carousel Section -->
+            <div
+              id="testimonialCarousel"
+              class="carousel carousel-dark slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- First Testimonial -->
+                <div class="carousel-item active">
+                  <div class="testi-container text-center p-4">
+                    <div class="d-inline-flex gap-2">
+                      <img
+                        src="https://mir-s3-cdn-cf.behance.net/user/50/c10ee1520267021.6425fb2b5f777.jpg"
+                        class="rounded-circle"
+                        alt=""
+                      />
+                      <p>Jessica Knowels</p>
+                    </div>
+                    <div class="content p-3">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Sint, minima. Vitae corrupti nulla aspernatur
+                        facilis, ad quia omnis nostrum saepe eveniet nesciunt
+                        sequi deleniti? Facilis aliquid explicabo quos
+                        asperiores magnam! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Ipsam itaque labore
+                        assumenda obcaecati, maiores dignissimos hic, numquam
+                        quas facilis distinctio iure similique! Neque debitis
+                        dolorem accusamus minima perferendis dolore voluptates!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testi-container text-center p-4">
+                    <div class="d-inline-flex gap-2">
+                      <img
+                        src="https://mir-s3-cdn-cf.behance.net/user/50/c10ee1520267021.6425fb2b5f777.jpg"
+                        class="rounded-circle"
+                        alt=""
+                      />
+                      <p>Trisha Jacob</p>
+                    </div>
+                    <div class="content p-3">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Sint, minima. Vitae corrupti nulla aspernatur
+                        facilis, ad quia omnis nostrum saepe eveniet nesciunt
+                        sequi deleniti? Facilis aliquid explicabo quos
+                        asperiores magnam! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Ipsam itaque labore
+                        assumenda obcaecati, maiores dignissimos hic, numquam
+                        quas facilis distinctio iure similique! Neque debitis
+                        dolorem accusamus minima perferendis dolore voluptates!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testi-container text-center p-4">
+                    <div class="d-inline-flex gap-2">
+                      <img
+                        src="https://mir-s3-cdn-cf.behance.net/user/50/c10ee1520267021.6425fb2b5f777.jpg"
+                        class="rounded-circle"
+                        alt=""
+                      />
+                      <p>Trisha Jacob</p>
+                    </div>
+                    <div class="content p-3">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Stur adipisicing elit. Ipsam itaque labore
+                        assumenda obcaecati, maiores dignissimos hic, numquam
+                        quas facilis distinctio iure similique! Neque debitis
+                        dolorem accusamus minima perferendis dolore voluptates!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testi-container text-center p-4">
+                    <div class="d-inline-flex gap-2">
+                      <img
+                        src="https://mir-s3-cdn-cf.behance.net/user/50/c10ee1520267021.6425fb2b5f777.jpg"
+                        class="rounded-circle"
+                        alt=""
+                      />
+                      <p>Trisha Jacob</p>
+                    </div>
+                    <div class="content p-3">
+                      <p>
+                        Vorrupti nulla aspernatur facilis, ad quia omnis nostrum
+                        saepe eveniet nesciunt sequi deleniti? Facilis aliquid
+                        explicabo quos asperiores magnam! Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Ipsam itaque labore
+                        assumenda obcaecati, maiores dignissimos hic, numquam
+                        quas facilis distinctio iure similique! Neque debitis
+                        dolorem accusamus minima perferendis dolore voluptates!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="test-content mt-5">
+              <h1 class="heading">
+                What our <br />
+                customers think
+              </h1>
+              <p>
+                We have many testimonials from our new and regular customers.
+                You can trust us because we love our work and provide you with
+                only honest reviews.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="heading">Categories</h1>
+          </div>
+          <div class="col-6">
+            <div class="d-inline-flex float-end m-3">
+              <button class="btn catalog-btn">Catalog</button>
+            </div>
+          </div>
+        </div>
+        <div class="cat-container mt-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+              <div class="card">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body d-flex justify-content-between">
+                  <div class="details">
+                    <h5 class="card-title">Planters</h5>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+              <div class="card">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body d-flex justify-content-between">
+                  <div class="details">
+                    <h5 class="card-title">Easy Care Plants</h5>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+              <div class="card">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body d-flex justify-content-between">
+                  <div class="details">
+                    <h5 class="card-title">Flowering</h5>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
+              <div class="card">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body d-flex justify-content-between">
+                  <div class="details">
+                    <h5 class="card-title">Faux</h5>
+                  </div>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row r-0">
+              <div class="col-6">
+                <img
+                  src="https://images.pexels.com/photos/1022922/pexels-photo-1022922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  alt=""
+                />
+                <br />
+                <img
+                  src="https://images.pexels.com/photos/403571/pexels-photo-403571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  alt=""
+                />
+              </div>
+              <div class="col-6 p-0">
+                <img
+                  src="https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  class="img-fluid about-img"
+                  style="height: 81%"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="delivery-content mt-5">
+              <h1 class="heading">Delivery & Payment</h1>
+              <p>
+                We package our plants securely yet sustainably by reusing boxes,
+                paper (newspapers), etc. Delivery is carried out to all cities
+                of Ukraine, except for the occupied ones. Pickup is possible in
+                Kyiv. <br />
+                <br />
+                We have full & partial prepayment by card and cash on delivery
+                to make you feel completely secure. We have many
+                <u>testimonials</u> from new and regular customers.
+              </p>
+              <button class="btn catalog-btn">Catalog</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="find-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="heading">Find us on Instagram</h1>
+          </div>
+          <div class="col-6">
+            <div class="d-inline-flex float-end m-3">
+              <button class="btn btn-outline-success bg-transparent">
+                More details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <img
+              src="https://images.pexels.com/photos/14660079/pexels-photo-14660079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="https://images.pexels.com/photos/3094220/pexels-photo-3094220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="https://images.pexels.com/photos/6697329/pexels-photo-6697329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <a class="navbar-brand" href="#">Green paradise</a><br />
+            <div class="d-inline-flex gap-2">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-solid fa-paper-plane" style="color: #000000"></i>
+            </div>
+            <p>email:<a href="">greenparadise@gmail.com</a></p>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <h6>Catalog</h6>
+            <ul style="list-style: none" class="p-0 mt-0">
+              <li><a href="allProducts.html"> All Products </a></li>
+              <li><a href="#popular-products"> Popular Products </a></li>
+              <li><a href=""> Planters </a></li>
+              <li><a href=""> Befinner Friendly </a></li>
+              <li><a href=""> Faux </a></li>
+              <li><a href=""> Flowering </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <h6>About</h6>
+            <ul style="list-style: none" class="p-0 mt-0">
+              <li><a href="#about"> About Us </a></li>
+              <li><a href="#testimonials"> Testimonials </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <h6>Info</h6>
+            <ul style="list-style: none" class="p-0 mt-0">
+              <li><a href="allProducts.html"> Privacy Policy </a></li>
+              <li><a href="#popular-products"> Terms & Conditions </a></li>
+              <li><a href=""> Returns & Refunds </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>
