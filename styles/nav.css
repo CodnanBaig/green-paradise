@@ -1,0 +1,16 @@
+.navbar-brand {
+  color: #486e00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #3a3a3a !important;
+  text-align: center;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: black;
+    border: none;
+}

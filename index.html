@@ -4,7 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -24,6 +29,8 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>Green Paradise</title>
   </head>
   <body>
@@ -35,55 +42,7 @@
       <span></span>
       <span></span>
     </div>
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Green paradise</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"
-            ><i class="fa-solid fa-bars"></i
-          ></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="allProducts.html"
-                >Catalog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#delivery"
-                tabindex="-1"
-                aria-disabled="true"
-                >Delivery & Payment</a
-              >
-            </li>
-          </ul>
-          <span class="navbar-text mx-2">
-            <i class="fa-solid fa-user-circle"></i>
-          </span>
-          <span class="navbar-text mx-2">
-            <span class="cart-count">3</span>
-            <i class="fa-solid fa-shopping-cart"></i>
-          </span>
-          <span class="navbar-text mx-2">
-            <i class="fa-solid fa-search"></i>
-          </span>
-        </div>
-      </div>
-    </nav>
+    <nav class="navbar sticky-top navbar-expand-lg bg-transparent"></nav>
 
     <section id="top">
       <div class="container-fluid p-0">
@@ -99,7 +58,9 @@
                 ><span style="color: #b9b900">aine</span>
               </p>
               <br />
-              <button class="catalog-btn btn mb-3">Catalog</button>
+              <button class="catalog-btn btn mb-3">
+                <a href="allProducts.html" style="color: white"> Catalog</a>
+              </button>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 p-0">
@@ -160,68 +121,15 @@
     <section id="popular-products" class="mt-5">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
             <h1 class="heading">Popular Products</h1>
-          </div>
-          <div class="col-6">
-            <div class="d-inline-flex float-end m-3">
-              <button class="btn rounded-circle mx-2 btn-primary"><</button>
-              <button class="btn rounded-circle mx-2 btn-primary">></button>
-            </div>
           </div>
         </div>
         <div class="row mt-5 g-5">
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body d-flex justify-content-between">
-                <div class="details">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">459RS</p>
-                </div>
-                <button class="btn btn-primary buy-btn">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body d-flex justify-content-between">
-                <div class="details">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">459RS</p>
-                </div>
-                <button class="btn btn-primary buy-btn">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body d-flex justify-content-between">
-                <div class="details">
-                  <h5 class="card-title">Product Name</h5>
-                  <p class="card-text">459RS</p>
-                </div>
-                <button class="btn btn-primary buy-btn">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </button>
+          <div class="col-12">
+            <div class="product-carousel">
+              <div class="product-scroll" id="productScroll">
+                <div id="popular-products-container"></div>
               </div>
             </div>
           </div>
@@ -233,14 +141,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <!-- Carousel Section -->
             <div
               id="testimonialCarousel"
               class="carousel carousel-dark slide"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
-                <!-- First Testimonial -->
                 <div class="carousel-item active">
                   <div class="testi-container text-center p-4">
                     <div class="d-inline-flex gap-2">
@@ -387,7 +293,9 @@
           </div>
           <div class="col-6">
             <div class="d-inline-flex float-end m-3">
-              <button class="btn catalog-btn">Catalog</button>
+              <button class="btn catalog-btn">
+                <a href="allProducts.html" style="color: white"> Catalog</a>
+              </button>
             </div>
           </div>
         </div>
@@ -396,7 +304,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
               <div class="card">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  src="https://cdn.sanity.io/images/y346iw48/production/b31557b4166ed74b56d4c8460787d2fa90c2e668-1200x1553.webp?auto=format"
                   class="card-img-top"
                   alt="..."
                 />
@@ -411,7 +319,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
               <div class="card">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  src="https://cdn.sanity.io/images/y346iw48/production/40b39f12c035eed5156c748905780399a6840d5c-640x828.webp?auto=format"
                   class="card-img-top"
                   alt="..."
                 />
@@ -426,7 +334,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
               <div class="card">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  src="https://cdn.sanity.io/images/y346iw48/production/6eafb73d363b72b31bdfba5fe33bfe8a1e0dc0a9-640x828.webp?auto=format"
                   class="card-img-top"
                   alt="..."
                 />
@@ -441,7 +349,7 @@
             <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
               <div class="card">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_Faux-Queen-Anne-Lace-Burnt-Orange_variant.jpg?v=1661874527"
+                  src="https://cdn.sanity.io/images/y346iw48/production/13f9350ddd653338697f3acaa955c35dbd530289-1200x1553.webp?auto=format"
                   class="card-img-top"
                   alt="..."
                 />
@@ -499,7 +407,9 @@
                 to make you feel completely secure. We have many
                 <u>testimonials</u> from new and regular customers.
               </p>
-              <button class="btn catalog-btn">Catalog</button>
+              <button class="btn catalog-btn">
+                <a href="allProducts.html" style="color: white"> Catalog</a>
+              </button>
             </div>
           </div>
         </div>
@@ -546,46 +456,7 @@
       </div>
     </section>
 
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <div class="row ">
-          <div class="col-lg-3 col-sm-6 col-md-6">
-            <a class="navbar-brand" href="#">Green paradise</a><br />
-            <div class="d-inline-flex gap-2">
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-solid fa-paper-plane" style="color: #000000"></i>
-            </div>
-            <p>email:<a href="">greenparadise@gmail.com</a></p>
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-6">
-            <h6>Catalog</h6>
-            <ul style="list-style: none" class="p-0 mt-0">
-              <li><a href="allProducts.html"> All Products </a></li>
-              <li><a href="#popular-products"> Popular Products </a></li>
-              <li><a href=""> Planters </a></li>
-              <li><a href=""> Befinner Friendly </a></li>
-              <li><a href=""> Faux </a></li>
-              <li><a href=""> Flowering </a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-6">
-            <h6>About</h6>
-            <ul style="list-style: none" class="p-0 mt-0">
-              <li><a href="#about"> About Us </a></li>
-              <li><a href="#testimonials"> Testimonials </a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-6">
-            <h6>Info</h6>
-            <ul style="list-style: none" class="p-0 mt-0">
-              <li><a href="allProducts.html"> Privacy Policy </a></li>
-              <li><a href="#popular-products"> Terms & Conditions </a></li>
-              <li><a href=""> Returns & Refunds </a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer class="footer mt-auto py-3 bg-light"></footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -595,4 +466,4 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
-<script src="./scripts/index.js"></script>
+<script type="module" src="./scripts/index.js"></script>
