@@ -1,0 +1,161 @@
+<style>body {
+    background-color: #fff8e9;
+    /* font-family: 'PT Mono';  */
+}
+
+#info {
+    padding: 30px 80px;
+    display: flex;
+}
+
+#left {
+    width: 57%;
+    padding: 5px;
+}
+
+#right {
+    width: 30%;
+    margin-left: 8%;
+    padding: 5px;
+}
+
+#topLeft {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fullName {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right {
+
+    padding: 0px 20px;
+}
+
+#topRight {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+
+#topRight p {
+    color: cadetblue;
+    margin-top: 25px;
+}
+
+#freeShopping {
+    text-align: center;
+    border: 2px solid rgb(154, 241, 198);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#h1 {
+    font-size: 40px;
+}
+
+#label {
+    font-size: 20px;
+}
+
+#firstName,
+#lastName,
+#number,
+#email,
+#text {
+    padding: 12px 8px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    width: 97%;
+    border-radius: 3px;
+    border: 1px solid #1e1e1e;
+    font-size: 16px;
+}
+
+#details {
+    margin-top: 30px;
+}
+
+#fullName input {
+    width: 300px;
+}
+
+#submit {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    scale: 1.1;
+    color: whitesmoke;
+    background-color: green;
+}
+
+
+#image img {
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    display: flex;
+    justify-content: space-between;
+}
+
+#promobtn {
+    width: 102%;
+    margin-top: -25px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(241, 89, 89);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#promobtn:hover {
+    scale: 1.1;
+    color: whitesmoke;
+    background-color: green;
+}
+
+#promocode,
+#actualPromoAmt {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    background: none;
+}
+
+input:active {
+    background: none;
+}
+
+#topLeft i {
+    margin-top: 23px;
+}
+
+#star {
+    color: #bf0d12;
+}
+
+</style>
