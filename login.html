@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style src="../joyful-ring-9720/styles/login.css">
+   
+   body {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+  </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Login Page</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+    </head>
+    <body>
+      <div class="container">
+        <form id="loginForm" class="form">
+          <h2>Login</h2>
+          <input type="text" placeholder="Username" id="loginUsername" required>
+          <input type="password" placeholder="Password" id="loginPassword" required>
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+          <div class="social-login">
+            <p>Login with:</p>
+            <div id="gSignIn" class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
+            <a href="#"><i class="fab fa-google"></i> Google</a>
+            <a href="#"><i class="fab fa-apple"></i> Apple</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+        </form>
+      </div>
+      <script src="../scripts/login.js"></script>
+    </body>
+    </html>
+   
