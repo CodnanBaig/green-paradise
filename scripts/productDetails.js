@@ -1,8 +1,6 @@
 
-document.querySelector('.logo').addEventListener('click',()=>{
-    location.href='index.html'
-})
 let cartitems=JSON.parse(localStorage.getItem('CartData')) || []
+
 let id=localStorage.getItem('id')
 let description=localStorage.getItem('description')
 let image=localStorage.getItem('image')

@@ -31,7 +31,10 @@ let displayData=(data)=>{
         price.textContent='$'+item.price
         let div=document.createElement('div')
         div.setAttribute('class','carditem')
-        div.append(img,name,price)
+        let div2= document.createElement('div')
+        div2.setAttribute('class', 'cardtext')
+        div2.append(name,price)
+        div.append(img,div2)
         div.addEventListener('click',()=>{
            localStorage.setItem('id',item.id)
            localStorage.setItem('description',item.description)

@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap" rel="stylesheet" >
 </head>
 <style>
     body{
         width: 80%;
         margin: auto;
         background-color: fffef8P;
+        font-family: 'Clash Display', sans-serif;
+        color: #416800;
     }
     /* #filtering{
         display: grid;
@@ -36,50 +39,72 @@
         border-start-start-radius: 12px;
         border-top-right-radius: 12px;
     }
-    .carditem>p{
-        margin-bottom: 10px;
+    .cardtext>p{
+        margin-top: 10px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px
+        ;
     }
     .carditem{
         width: 100%;
 
         margin: auto;
         border-radius: 12px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
     /* #filtering>label{
         margin-bottom: 19px;
     } */
     #filtering{
-        width: 20%
+        width: 20%;
+        margin-right: 80px;
+    }
+    #viewmore{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 240px;
+    }
+    .functions{
+        margin-top: 30px;
+    }
+    #main> img{
+        margin-top: 20px;
+    }
+    .cardtext{
+        background-color: #fcfae0;
+        padding: 5px;
     }
 
 </style>
 <body>
     
     <div id="main">
-        <h1>Catalog</h1>
+        <img src="data:image/webp;base64,UklGRkwEAABXRUJQVlA4IEAEAADwFgCdASqGADcAPt1krVEopSQipXK7uRAbiUAaHap/kdln0FcYB7ofMB5zemgb0dPr2pxJfiP3qy6Ie7IpV3987FoUxGbRHsCU0eiRJJS0EDwH86UvYnEmV5oMmudH9mXAROuy02ubAfzaH9PVmzWnXsQHNtCQXBrq0NmPhziL07HEG3GhXMtgoEWIrZczRDEBuS+QhUuSOr+fP7RX7QdwG6sU5f4UrzPzjbbFi8RvuEpoubDvPmAmTlO41v19uAAA/vitsaSX8kIhYc+0YKJPqSEDzyGmMjLaF0LlDZe5PQRdkW1zVgM+OSAkmXX9ixRJvNrHW2y113QFsgHicDW3sipzX18jToTLTC84THC5LNVW9TtzYzGNmhMb9GRilMA3WY3hc/U+a7l0xXkgmaBdnDX36ql/qU7m7DHf0cHFTyutjhtrvwMSdyPo9cz0sEmw0BCtG9EB4uT2638ql2eI3jpXIPsBXwae5r0TVY5As36MXGy8d4NwpYbLeL7BGhV8F2v2vc9jLbAL51fZiePobWKWKrZTOduDqjXZunmra7+acaH6GV+LbxmKfUn6Mz+WYgesBFmtnF7xh7JMLWwwaKsR2hV967+/EX8RfVG+chXDFircw/sbn1ei5CE8DP1+82ir7nxDW5T7FGZmSGxFNJdOSZrVINhHVxDlvqn6wsNfNL9qtqsILXOpJO/6LiBVi7e+tpe9WuC0jma3aCaABsgPLXgWe11Fb2oPbDu6cyJLl5N7RZb6JXADM1SuuJO/UFbBn56qkqgtjtW37zhPdRDaHylA5SMrVXjnItnq2XpnP75T35UNpiKsduJSjWzD+ROuxCpwHr3Gsnw9sDzTeDDZgW/HXIG7NWsUJdrDV/DgUib+f4zvbXltBnqnqVnxzLSCKFTsUb56axKIJmKIXWbPApBViRG+irhaJXfeEMW+Fg2dpDza+xh0s3Y15KT6K92CPa5CUaaJQq3w6cT0H9iAqxiCQKroLgkwOHK9Vo1TAzFVFjRp8+vM+FTMLOMMVJzbAJbZkootvDIrYmbnU6HtTqW17v9frWIaJlWjbNK6yPpk+/TnsnPPrEGzwb6sNeC+8xxaMCrkoykBEy68/7A6rrFV9VqA+fCDYM7X2RPBMIORcyyIYHHDdr9qkCoBBpX9spPu+B+TEIw+7ddxOlDP9PaPRp/6voPKOsCtOkVXmWdg4dUOobWTu12kTn4SjlFd7zzRLF0ZGm1RxH7LDRgiDX22My1VVMmZqDsRv5X/r+AIkE42XC1gxu6CUG6UF8RTbOFO5CildTakUNR94SN68j+rYhdmAYeavawQz+OjPxHdWBdYstP3HfpTnFGTfORZIEPdwDAeeH4X1rGkdx6eGEsk6InM0aGGFTuQfm30Qoo0XMjdHyfX4ysZk/NnuvRfLQL3DHezyNyyBcYzRP1HjuO06DDo6AAAAAAAAA==" alt="">
         <div id="secondmain">   
             <div id="filtering">
-                <p>Reset filters</p>
-                <label for="Houseplants"><input type="checkbox">Houseplants</label><br>
-                <label for="Houseplanting"><input type="checkbox">Houseplant sets</label><br>
-                <label for="flower"><input type="checkbox">Flower Pot</label><br>
-                <label for="soiland"><input type="checkbox">Soil and fertilizer</label><br>
+                <a href="allProducts.html"><p style="margin-bottom: 35px;">Reset filters</p></a>
+                <p></p><label for="Houseplants"><input type="checkbox">Houseplants</label><br></p>
+                <p><label for="Houseplanting"><input type="checkbox">Houseplant sets</label><br></p>
+                <p><label for="flower"><input type="checkbox">Flower Pot</label><br></p>
+                <p><label for="soiland"><input type="checkbox">Soil and fertilizer</label><br></p>
+                <div class="functions">
+                    <div>
+                        <i class="bi bi-sort-down"></i>
+                        <select id="sortbtn">SORT BY PRICE
+                            <option value="">SORT BY PRICE</option>
+                            <option value="asc">LOW TO HIGH</option>
+                            <option value="desc">HIGH TO LOW</option>
+                        </select>
+                    </div>
+                </div>
             </div>
             <div id="mainitems">
             </div>
         </div>
-        <div class="functions">
-            <div>
-                <i class="bi bi-sort-down"></i>
-                <select id="sortbtn">SORT BY PRICE
-                    <option value="">SORT BY PRICE</option>
-                    <option value="asc">LOW TO HIGH</option>
-                    <option value="desc">HIGH TO LOW</option>
-                </select>
-            </div>
-        </div>
-        <div><div id="viewmore"><button id="viewmorebutton">View More</button></div></div>
+        
+        <div id="viewmore"><button id="viewmorebutton">View More</button></div>
 
         
         
