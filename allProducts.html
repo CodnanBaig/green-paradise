@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 80%;
+        margin: auto;
+        background-color: fffef8P;
+    }
+    /* #filtering{
+        display: grid;
+        grid-template-columns: 1fr;
+    } */
+    #mainitems{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px;
+    }
+    /* #main>div{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    } */
+    #secondmain{
+        display: flex;
+        gap: 30px;
+    }
+    .carditem>img{
+        width: 100%;
+        margin-bottom: 10px;
+        border-start-start-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .carditem>p{
+        margin-bottom: 10px;
+    }
+    .carditem{
+        width: 100%;
+
+        margin: auto;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    /* #filtering>label{
+        margin-bottom: 19px;
+    } */
+    #filtering{
+        width: 20%
+    }
+
+</style>
+<body>
+    
+    <div id="main">
+        <h1>Catalog</h1>
+        <div id="secondmain">   
+            <div id="filtering">
+                <p>Reset filters</p>
+                <label for="Houseplants"><input type="checkbox">Houseplants</label><br>
+                <label for="Houseplanting"><input type="checkbox">Houseplant sets</label><br>
+                <label for="flower"><input type="checkbox">Flower Pot</label><br>
+                <label for="soiland"><input type="checkbox">Soil and fertilizer</label><br>
+            </div>
+            <div id="mainitems">
+            </div>
+        </div>
+        <div class="functions">
+            <div>
+                <i class="bi bi-sort-down"></i>
+                <select id="sortbtn">SORT BY PRICE
+                    <option value="">SORT BY PRICE</option>
+                    <option value="asc">LOW TO HIGH</option>
+                    <option value="desc">HIGH TO LOW</option>
+                </select>
+            </div>
+        </div>
+        <div><div id="viewmore"><button id="viewmorebutton">View More</button></div></div>
+
+        
+        
+    </div>
+    
+    <script src="scripts/allProducts.js" type="module"></script>
+</body>
+</html>
