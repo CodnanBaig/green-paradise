@@ -15,8 +15,9 @@
             align-items: center;
             gap: 10px;
             color: black;
-            /* Adjust the color of the headings */
+           
         }
+
         .active-step {
             color: black;
             font-weight: bold;
@@ -35,19 +36,15 @@
                     <i class="fas fa-arrow-right-long" style="opacity: 0.4;"></i>
                     <h3 style="opacity: 0.4;"><i class="fas fa-arrow-right"></i> Payment Method</h3>
                 </div>
-                
-               <div id="checkout">
-                <!-- <h2>Checkout</h2> -->
-                <hr>
-                <h3>Order Summary</h3>
-                <p>Name: <span id="userName">John Doe</span></p>
-                <p>Email: <span id="userEmail">johndoe@example.com</span></p>
-                <p>Mobile: <span id="userMobile">123-456-7890</span></p>
-                <hr>
-                <h3>Payment Details</h3>
-                <p>Amount: $<span id="paymentAmount">50</span></p>
-                <button type="button" class="btn btn-primary" id="rzp-button1">Proceed to Payment</button>
-               </div>
+
+                <div id="checkout">
+                    <h2>Checkout</h2>
+                    <hr>
+                   <div id = "Address"></div>
+                    <h3>Payment Details</h3>
+                    <p>Amount: $<span id="paymentAmount">50</span></p> 
+                    <button type="button" class="btn btn-primary" id="rzp-button1">Proceed to Payment</button>
+                </div>
 
 
 
@@ -63,7 +60,7 @@
                         <p>You earn 320 points on this purchase!</p>
                         <hr>
                         <div id="productDetails">
-                          <span id="cartCount" class="cart-count">0</span>
+                            <span id="cartCount" class="cart-count">0</span>
                         </div>
                     </div>
                 </div>
@@ -73,8 +70,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Add any additional scripts here -->
-     <script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
-    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 
 </body>
 
@@ -83,7 +80,7 @@
 
 <script>
     var options = {
-        "key": "rzp_test_M654vKdrqhRFgq", 
+        "key": "rzp_test_M654vKdrqhRFgq",
         // "amount": "1000",
         "currency": "INR",
         "description": "Acme Corp",
@@ -93,119 +90,162 @@
             // "email": "gaurav.kumar@example.com",
             // "contact": +919900000000,
         },
-  
+
     };
-     var rzp1 = new Razorpay(options);
+    var rzp1 = new Razorpay(options);
 
-        document.addEventListener('DOMContentLoaded', function () {
-            displayProducts();
-            updatePaymentAmount();
+    document.addEventListener('DOMContentLoaded', function () {
+        displayProducts();
+        updatePaymentAmount();
 
-            document.getElementById('rzp-button1').addEventListener('click', function (e) {
-                updatePaymentDetails();
-                rzp1.open();
-                e.preventDefault();
+        document.getElementById('rzp-button1').addEventListener('click', function (e) {
+            updatePaymentDetails();
+            rzp1.open();
+            e.preventDefault();
+        });
+    });
+
+
+    function updateCartCount() {
+        var cartCountElement = document.getElementById('cartCount');
+        var cartData = JSON.parse(localStorage.getItem('cart-item')) || [];
+        var totalCount = cartData.length;
+
+        cartCountElement.textContent = totalCount;
+    }
+
+    function displayProducts() {
+        var productDetailsContainer = document.getElementById('productDetails');
+        var data = JSON.parse(localStorage.getItem('cart-item')) || [];
+
+        data.forEach(function (product) {
+            var productItem = document.createElement('div');
+            productItem.classList.add('product-item');
+
+            var productImage = document.createElement('div');
+            productImage.classList.add('product-image');
+            var img = document.createElement('img');
+            img.src = product.image;
+            productImage.appendChild(img);
+
+            var productInfo = document.createElement('div');
+            var productName = document.createElement('p');
+            productName.textContent = product.name;
+            var productPrice = document.createElement('p');
+            productPrice.textContent = 'Price: ' + product.price;
+            var removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', function () {
+                removeProduct(product);
             });
+
+            productInfo.appendChild(productName);
+            productInfo.appendChild(productPrice);
+            productInfo.appendChild(removeButton);
+
+            productItem.appendChild(productImage);
+            productItem.appendChild(productInfo);
+
+            productDetailsContainer.appendChild(productItem);
+            updateCartCount()
+        });
+    }
+
+    function removeProduct(product) {
+        var data = JSON.parse(localStorage.getItem('cart-item')) || [];
+        var newData = data.filter(function (item) {
+            return item.id !== product.id;
+        });
+        localStorage.setItem('cart-item', JSON.stringify(newData));
+        updateCartCount()
+        location.reload();
+
+    }
+
+    function updatePaymentAmount() {
+        var data = JSON.parse(localStorage.getItem('cart-item')) || [];
+        var totalAmount = 0;
+
+        data.forEach(function (product) {
+            totalAmount += product.price;
         });
 
+        var paymentAmountElement = document.getElementById('paymentAmount');
+        paymentAmountElement.textContent = '$' + totalAmount.toFixed(2);
+        updateCartCount()
+    }
 
-        function updateCartCount() {
-                var cartCountElement = document.getElementById('cartCount');
-                var cartData = JSON.parse(localStorage.getItem('cart-item')) || [];
-                var totalCount = cartData.length;
-
-                cartCountElement.textContent = totalCount;
-            }
-
-        function displayProducts() {
-            var productDetailsContainer = document.getElementById('productDetails');
-            var data = JSON.parse(localStorage.getItem('cart-item')) || [];
-
-            data.forEach(function (product) {
-                var productItem = document.createElement('div');
-                productItem.classList.add('product-item');
-
-                var productImage = document.createElement('div');
-                productImage.classList.add('product-image');
-                var img = document.createElement('img');
-                img.src = product.image;
-                productImage.appendChild(img);
-
-                var productInfo = document.createElement('div');
-                var productName = document.createElement('p');
-                productName.textContent = product.name;
-                var productPrice = document.createElement('p');
-                productPrice.textContent = 'Price: ' + product.price;
-                var removeButton = document.createElement('button');
-                removeButton.textContent = 'Remove';
-                removeButton.addEventListener('click', function () {
-                    removeProduct(product);
-                });
-
-                productInfo.appendChild(productName);
-                productInfo.appendChild(productPrice);
-                productInfo.appendChild(removeButton);
-
-                productItem.appendChild(productImage);
-                productItem.appendChild(productInfo);
-
-                productDetailsContainer.appendChild(productItem);
-                updateCartCount()
-            });
-        }
-
-        function removeProduct(product) {
-            var data = JSON.parse(localStorage.getItem('cart-item')) || [];
-            var newData = data.filter(function (item) {
-                return item.id !== product.id;
-            });
-            localStorage.setItem('cart-item', JSON.stringify(newData));
-            updateCartCount()
-            location.reload();
-            
-        }
-
-        function updatePaymentAmount() {
-            var data = JSON.parse(localStorage.getItem('cart-item')) || [];
-            var totalAmount = 0;
-
-            data.forEach(function (product) {
-                totalAmount += product.price;
-            });
-
-            var paymentAmountElement = document.getElementById('paymentAmount');
-            paymentAmountElement.textContent = '$' + totalAmount.toFixed(2);
-            updateCartCount()
-        }
-
-        function updatePaymentDetails() {
-            var userData = JSON.parse(localStorage.getItem('userData')) || {};
-            var data = JSON.parse(localStorage.getItem('cart-item')) || [];
-            var totalAmount = 0;
-
-            data.forEach(function (product) {
-                totalAmount += product.price;
-            });
-
-            options.prefill.email = userData.email ;
-            options.prefill.contact = userData.mobile ;
-            options.amount = totalAmount;
-            updateCartCount()
-        }
-
+    function updatePaymentDetails() {
         var userData = JSON.parse(localStorage.getItem('userData')) || {};
-        var userNameElement = document.getElementById('userName');
-        var userEmailElement = document.getElementById('userEmail');
-        var userMobileElement = document.getElementById('userMobile');
+        var data = JSON.parse(localStorage.getItem('cart-item')) || [];
+        var totalAmount = 0;
 
-        if (userData.name) {
-            userNameElement.textContent = userData.name;
-        }
-        if (userData.email) {
-            userEmailElement.textContent = userData.email;
-        }
-        if (userData.mobile) {
-            userMobileElement.textContent = userData.mobile;
-        }
+        data.forEach(function (product) {
+            totalAmount += product.price;
+        });
+
+        options.prefill.email = userData.email;
+        options.prefill.contact = userData.mobile;
+        options.amount = totalAmount;
+        updateCartCount()
+    }
+
+     var userInfo = JSON.parse(localStorage.getItem('UserInfo')) || {};
+     var userData = JSON.parse(localStorage.getItem('userData')) || {};
+     console.log(userInfo)
+      var addressContainer = document.getElementById('Address');
+
+    if (userInfo.name) {
+        var nameElement = document.createElement('p');
+        nameElement.textContent =  userInfo.name;
+        addressContainer.appendChild(nameElement);
+    } else {
+        var noNameElement = document.createElement('p');
+        noNameElement.textContent = "No Name";
+        addressContainer.appendChild(noNameElement);
+    }
+
+   
+
+    if (userData.Address) {
+        var addressElement = document.createElement('p');
+        addressElement.textContent = userData.Address;
+        addressContainer.appendChild(addressElement);
+    } else {
+        var noAddressElement = document.createElement('p');
+        noAddressElement.textContent = "No Address";
+        addressContainer.appendChild(noAddressElement);
+    }
+
+    if (userData.Landmark) {
+        var landmarkElement = document.createElement('p');
+        landmarkElement.textContent = userData.Landmark;
+        addressContainer.appendChild(landmarkElement);
+    } else {
+        var noLandmarkElement = document.createElement('p');
+        noLandmarkElement.textContent = "No Landmark";
+        addressContainer.appendChild(noLandmarkElement);
+    }
+
+    if (userData.city && userData.po) {
+        var cityElement = document.createElement('p');
+        cityElement.textContent =  userData.city + " " + userData.po;
+        addressContainer.appendChild(cityElement);
+    } else {
+        var noCityElement = document.createElement('p');
+        noCityElement.textContent = "No City";
+        addressContainer.appendChild(noCityElement);
+    }
+    if (userInfo.mobile) {
+        var mobileElement = document.createElement('p');
+        mobileElement.textContent = userInfo.mobile;
+        addressContainer.appendChild(mobileElement);
+    } else {
+        var noMobileElement = document.createElement('p');
+        noMobileElement.textContent = "No Mobile";
+        addressContainer.appendChild(noMobileElement);
+    }
+
+
 
 </script>

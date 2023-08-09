@@ -37,14 +37,19 @@
                     <input type="text" class="form-control" id="Address" placeholder="Enter your full Address here">
                 </div>
                 <div class="mb-3">
+                    <label for="Landmark" class="form-label">Landmark</label>
+                    <input type="tel" class="form-control" id="Landmark" placeholder="Enter Landmark">
+                </div>
+                <div class="mb-3">
                     <label for="Pincode" class="form-label">Pincode</label>
                     <input type="Pincode" class="form-control" id="Pincode" placeholder="Enter your Pincode">
                 </div>
             
                 <div class="mb-3">
                     <label for="City" class="form-label">City</label>
-                    <input type="tel" class="form-control" id="City" placeholder="Enter yourCity">
+                    <input type="tel" class="form-control" id="City" placeholder="Enter your City">
                 </div>
+                
                 <button type="submit" class="btn btn-primary" id="submit">Continue</button>
             </form>
                
@@ -78,12 +83,15 @@
             event.preventDefault();
 
             let Address = document.getElementById("Address").value;
+            let Landmark = document.getElementById("Landmark").value;
 
             let city = document.getElementById("City").value;
             let po = document.getElementById("Pincode").value;
-            if (Address == "" || city == "" || po == "") {
+            
+            if (Address == "" || Landmark == "" || city == "" || po == "") {
                 alert("Please Fill All Details")
             } else {
+                localStorage.setItem("userData", JSON.stringify({ Address, Landmark , city , po }));
                 location.href = "checkout.html"
             }
         })

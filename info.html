@@ -146,14 +146,15 @@
 
                 // Function to save user data to local storage
                 function saveUserData() {
-                var userData = {
+                        var userData = {
                             name: document.getElementById('fullName').value,
-                        email: document.getElementById('email').value,
-                        mobile: document.getElementById('mobile').value
-                };
+                            email: document.getElementById('email').value,
+                            mobile: document.getElementById('mobile').value
+                        };
 
-                localStorage.setItem('userData', JSON.stringify(userData));
-                     }
+                        localStorage.setItem('UserInfo', JSON.stringify(userData));
+                    }
+
 
                 // Event listener for the form submission
                 var submitButton = document.getElementById('submit');
