@@ -90,6 +90,11 @@
             // "email": "gaurav.kumar@example.com",
             // "contact": +919900000000,
         },
+        handler: function (response) {
+            // This function will be called after the payment is successful.
+            // You can add code here to redirect to the "Thank You" page.
+            window.location.href = 'thankyou.html'; // Change the URL to your actual "Thank You" page
+        }
 
     };
     var rzp1 = new Razorpay(options);
