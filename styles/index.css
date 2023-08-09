@@ -43,58 +43,58 @@ h2 {
 }
 
 .background span:nth-child(0) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 92%;
   left: 36%;
   animation-duration: 165s;
   animation-delay: -200s;
   transform-origin: 14vw 0vh;
-  box-shadow: 40vmin 0 5.903027340239266vmin currentColor;
+  box-shadow: 40vmin 0 12.820479vmin currentColor;
 }
 .background span:nth-child(1) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 10%;
   left: 17%;
   animation-duration: 159s;
   animation-delay: -279s;
   transform-origin: -14vw -4vh;
-  box-shadow: 40vmin 0 5.638775943189915vmin currentColor;
+  box-shadow: 40vmin 0 12.820479vmin currentColor;
 }
 .background span:nth-child(2) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 6%;
   left: 94%;
   animation-duration: 307s;
   animation-delay: -186s;
   transform-origin: -20vw -4vh;
-  box-shadow: -40vmin 0 5.308551817410485vmin currentColor;
+  box-shadow: -40vmin 0 12.820479vmin currentColor;
 }
 .background span:nth-child(3) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 6%;
   left: 68%;
   animation-duration: 282s;
   animation-delay: -143s;
   transform-origin: 5vw -4vh;
-  box-shadow: -40vmin 0 5.742949277563363vmin currentColor;
+  box-shadow: -40vmin 0 12.820479vmin currentColor;
 }
 .background span:nth-child(4) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 35%;
   left: 84%;
   animation-duration: 320s;
   animation-delay: -38s;
   transform-origin: -6vw -24vh;
-  box-shadow: -40vmin 0 5.255858316271614vmin currentColor;
+  box-shadow: -40vmin 0 12.820479vmin currentColor;
 }
 .background span:nth-child(5) {
-  color: #acc9718f;
+  color: #f0ee898f;
   top: 40%;
   left: 57%;
   animation-duration: 18s;
   animation-delay: -9s;
   transform-origin: 9vw 15vh;
-  box-shadow: -40vmin 0 5.820478522526461vmin currentColor;
+  box-shadow: -40vmin 0 12.820479vmin currentColor;
 }
 
 /* TOP BANNER */
@@ -129,7 +129,6 @@ h2 {
   border-radius: 5px;
   margin-top: 2%;
 }
-
 
 /* TESTIMONIALS */
 
@@ -171,4 +170,10 @@ h2 {
 
 .btn-outline-success:hover {
   background-color: #486e00 !important;
+}
+
+@media (max-width: 415px) {
+  .heading {
+    font-size: 2.5rem;
+  }
 }

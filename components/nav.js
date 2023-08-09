@@ -1,3 +1,101 @@
+let BASEURL = "http://localhost:3000/";
+let singleProduct = JSON.parse(localStorage.getItem("single-product")) || [];
+
+let getData = async () => {
+  try {
+    let res = await fetch(`${BASEURL}products`);
+    let data = await res.json();
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};
+
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(null, args);
+    }, delay);
+  };
+}
+
+let debouncedSearch = debounce(async (query) => {
+  console.log("Search query:", query);
+
+  let data = await getData();
+  console.log("All data:", data);
+
+  let filteredResults = data.filter(
+    (product) =>
+      product.name.toLowerCase().includes(query.toLowerCase()) ||
+      product.category.toLowerCase() === query.toLowerCase()
+  );
+
+  console.log("Filtered results:", filteredResults);
+  displaySearchResultsDropdown(filteredResults);
+}, 300);
+
+function displaySearchResultsDropdown(results) {
+  let dropdown = document.getElementById("searchResultsDropdown");
+  dropdown.innerHTML = "";
+
+  if (results.length === 0) {
+    dropdown.style.display = "none";
+    return;
+  }
+
+  let hideButton = document.createElement("button");
+  hideButton.textContent = "Hide Results"; 
+  hideButton.className = "hide-results-button btn btn-outline";
+  hideButton.addEventListener("click", () => {
+    dropdown.style.display = "none"; 
+  });
+
+  dropdown.appendChild(hideButton);
+
+  dropdown.style.display = "block";
+
+  let ul = document.createElement("ul");
+  ul.className = "search-results-list";
+  ul.style.listStyle = "none";
+
+  results.forEach((product) => {
+    let li = document.createElement("li");
+    li.className = "search-result-item";
+
+    let img = document.createElement("img");
+    img.src = product.img; 
+    img.alt = product.name;
+    img.className = "search-result-image";
+
+    let name = document.createElement("h3");
+    name.textContent = product.name;
+    name.className = "search-result-name";
+
+    let category = document.createElement("small");
+    category.textContent = product.category
+
+    let price = document.createElement("p");
+    price.textContent = `$${product.price}RS`;
+    price.className = "search-result-price";
+
+    
+    li.append(img, name, category, price);
+
+    li.addEventListener("click", () => {
+      singleProduct.push(product);
+      localStorage.setItem("single-item", JSON.stringify(singleProduct));
+      window.location.href = `productDetails.html`;
+    });
+
+    ul.appendChild(li);
+  });
+
+  dropdown.appendChild(ul);
+}
+
 let nav = () => {
   let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
   let cCount = document.getElementById("cartCount");
@@ -6,7 +104,6 @@ let nav = () => {
     cartCount = event.detail.cartCount;
     cCount.innerText = cartCount;
   });
-
   return `<div class="container">
     <a class="navbar-brand" href="index.html">Green paradise</a>
     <button
@@ -56,14 +153,33 @@ let nav = () => {
       <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
     </ul>
   </div>
-      <span class="navbar-text mx-2">
+      <span class="navbar-text">
         <span id="cartCount" class="cart-count bg-success p-1 rounded-pill" style="color: white;">${cartCount}</span>
         <a style="color: black" href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
       </span>
-      <span class="navbar-text mx-2">
-        <i  class="fa-solid fa-search"></i>
+      <span class="navbar-text d-flex mx-2 mt-2">
+      <i id="searchIcon" class="fa-solid fa-search"></i>
+      <div id="searchBar" class="ps-2 search-bar">
+        <input type="text" class="search" id="s-input" placeholder="Search" style="width: 100%; border: none; border-bottom: 1px solid; padding-left: 10px;">
+      </div>
       </span>
+      <div id="searchResultsDropdown"></div>
     </div>
   </div>`;
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  let searchIcon = document.getElementById("searchIcon");
+
+  searchIcon.addEventListener("click", () => {
+    let searchBar = document.getElementById("searchBar");
+    searchBar.classList.toggle("active");
+  });
+
+  let searchInput = document.querySelector("#s-input");
+  searchInput.addEventListener("input", (event) => {
+    let query = event.target.value;
+    debouncedSearch(query);
+  });
+});
 export default nav;

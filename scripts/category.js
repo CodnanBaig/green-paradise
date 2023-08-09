@@ -87,7 +87,7 @@ function loadPage(page) {
 
   currentPageProducts.forEach((el) => {
     let card = document.createElement("div"); // Move this line here
-    card.setAttribute("class", "col-lg-4 col-md-4 col-sm-6");
+    card.setAttribute("class", "col-lg-4 col-md-4 col-sm-6 col-xs-6");
 
     card.innerHTML = `<div class="product-card">
       <div class="card">
