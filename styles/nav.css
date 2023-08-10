@@ -34,17 +34,25 @@
   top: 100%;
   right: 0;
   width: 50%;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 1;
   display: none;
-  height: 400px;
+  height: 80vh;
   overflow-y: auto;
 }
 
 .hide-results-button {
-  background-color: white !important;
+  background-color: transparent;
+}
+
+.search-result-list {
+  background-color: #3a3a3a;
+  text-decoration: underline !important;
 }
 
 .search-result-item {
@@ -54,6 +62,7 @@
 
 .search-result-image {
   width: 30%;
+  border-radius: 5px;
 }
 
 #searchResultsDropdown.active {

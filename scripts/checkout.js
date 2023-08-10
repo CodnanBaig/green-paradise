@@ -127,6 +127,11 @@ displayCart();
 
 console.log(userAdd, userInfo);
 document.addEventListener("DOMContentLoaded", () => {
+let loggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+console.log(loggedIn);
+if (!loggedIn) {
+    window.location.href = "login.html";
+}
   const personalInfoSection = document.getElementById("personalInfoSection");
   const deliverySection = document.getElementById("deliverySection");
   const paymentSection = document.getElementById("paymentSection");

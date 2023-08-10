@@ -106,6 +106,7 @@ let nav = () => {
     cartCount = event.detail.cartCount;
     cCount.innerText = cartCount;
   });
+  
   let navContent = `<div class="container">
     <a class="navbar-brand" href="index.html">Green paradise</a>
     <button
@@ -140,7 +141,7 @@ let nav = () => {
         <span class="navbar-text pe-2">${userData[0].username}</span>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="index.html">Logout</a></li>
+          <li><a class="dropdown-item" id="logout" href="index.html">Logout</a></li>
         </ul>
       </div>`;
   } else {
@@ -171,7 +172,6 @@ let nav = () => {
     <div id="searchResultsDropdown"></div>
   </div>
 </div>`;
-
   return navContent;
 };
 
