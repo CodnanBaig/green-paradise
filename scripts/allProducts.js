@@ -1,7 +1,7 @@
-let currentPage = 1; 
+let currentPage = 1;
 let productsPerPage = 9;
 let currentSortType = "";
-let currentCategory = ""; 
+let currentCategory = "";
 //! importing
 import footer from "../components/footer.js";
 import nav from "../components/nav.js";
@@ -12,6 +12,9 @@ document.querySelector("footer").innerHTML = footer();
 document.querySelector("nav").innerHTML = nav();
 
 let BASEURL = "http://localhost:3000/";
+
+let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
 
 let getData = async () => {
   try {
@@ -50,19 +53,51 @@ let displayData = async (prods, page, sortType) => {
     let el = filteredData[i];
     let card = document.createElement("div");
     card.className = "card col-lg-4 col-sm-6 col-xs-6";
-    card.innerHTML = `<img src=${el.img} class="card-img-top" alt="Product Image" />
-    <div class="card-body d-flex justify-content-between">
-      <div class="details">
-        <h5 class="card-title">${el.name}</h5>
-        <p class="card-text">${el.price} RS</p>
-      </div>
-      <button class="btn btn-primary buy-btn addCart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-    </div>`;
-    parent.append(card);
+
+    let image = document.createElement("img");
+    image.src = el.img;
+    image.alt = "Product Image";
+    image.className = "card-img-top";
+
+    image.addEventListener("click", () => {
+      localStorage.setItem("selected-product", JSON.stringify(el));
+      window.location.href = "productDetails.html";
+    });
+
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body d-flex justify-content-between";
+    let details = document.createElement("div");
+    details.className = "details";
+    details.innerHTML = `
+      <h5 class="card-title">${el.name}</h5>
+      <p class="card-text">${el.price} RS</p>
+    `;
+    let buyButton = document.createElement("button");
+    buyButton.className = "btn btn-primary buy-btn addCart";
+    buyButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`;
+
+    buyButton.addEventListener("click", () => {
+      cartCount++;
+      cartList.push(el);
+      localStorage.setItem("cart-list", JSON.stringify(cartList));
+      localStorage.setItem("cart-count", JSON.stringify(cartCount));
+      updateCartCountUI();
+    });
+
+    cardBody.appendChild(details);
+    cardBody.appendChild(buyButton);
+
+    card.appendChild(image);
+    card.appendChild(cardBody);
+
+    parent.appendChild(card);
   }
 };
+
+function updateCartCountUI() {
+  let cCount = document.getElementById("cartCount");
+  cCount.innerText = cartCount;
+}
 
 let sortDropdown = document.getElementById("sortbtn");
 sortDropdown.addEventListener("change", () => {

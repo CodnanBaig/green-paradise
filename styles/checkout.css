@@ -39,3 +39,13 @@ img {
   border-radius: 5px;
   border: 2px solid #ffffff;
 }
+
+h6 {
+  color: #486e00;
+}
+
+h6 > span {
+  font-weight: 400;
+  padding-left: 1%;
+  color: #3a3a3a !important;
+}

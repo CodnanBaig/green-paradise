@@ -1,55 +1,47 @@
-let cartitems = JSON.parse(localStorage.getItem("CartData")) || [];
+import nav from "../components/nav.js";
+import footer from "../components/footer.js";
+import popularProductsCarousel from "../components/popularProducts.js";
 
-let id = localStorage.getItem("id");
-let description = localStorage.getItem("description");
-let image = localStorage.getItem("image");
-let price = localStorage.getItem("price");
-let title = localStorage.getItem("title");
-title = title.toUpperCase();
-let detailImage = document.createElement("img");
-detailImage.src = image;
-let mainImage = document.querySelector(".mainImage");
-mainImage.append(detailImage);
-let titleContainer = document.createElement("h1");
-titleContainer.append(title);
-let priceContainer = document.createElement("p");
-priceContainer.textContent = "$" + price;
-let addtobag = document.createElement("button");
-addtobag.setAttribute("id", "addtobag");
-addtobag.textContent = "Add to bag";
-let descriptionTitle = document.createElement("p");
-descriptionTitle.textContent = "DESCRIPTION";
-let hr = document.createElement("hr");
-let descriptionContainer = document.createElement("p");
-descriptionContainer.textContent = description;
-document
-  .querySelector(".mainDesc")
-  .append(
-    titleContainer,
-    priceContainer,
-    addtobag,
-    descriptionTitle,
-    hr,
-    descriptionContainer
-  );
-console.log(id, title, image, description);
-document.querySelector("#addtobag").addEventListener("click", () => {
-  let flag = false;
-  cartitems.forEach((item) => {
-    if (item.id == id) {
-      flag = true;
-      ++item.quantity;
-    }
-  });
-  if (!flag) {
-    let obj = {
-      id: id,
-      img: image,
-      desc: title,
-      price: price,
-      quantity: 1,
-    };
-    cartitems.push(obj);
+popularProductsCarousel();
+
+document.querySelector("footer").innerHTML = footer();
+document.querySelector("nav").innerHTML = nav();
+
+document.addEventListener("DOMContentLoaded", () => {
+  let selectedProduct = JSON.parse(localStorage.getItem("selected-product"));
+  let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
+
+  let displayProduct = () => {
+    let parent = document.getElementById("product");
+    let card = document.createElement("div");
+    card.className = "row";
+    card.innerHTML = `
+      <div class="col-lg-4 col-sm-12">
+        <img class="img-fluid" src=${selectedProduct.img} alt="" />
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <h2>${selectedProduct.name}</h2>
+        <h4>${selectedProduct.price}RS</h4>
+        <p class="mt-3">${selectedProduct.description}</p>
+        <button id="addCart" class="btn catalog-btn">Add to cart</button>
+      </div>`;
+
+    let addCart = card.querySelector("button");
+    addCart.addEventListener("click", () => {
+      cartCount++;
+      cartList.push(selectedProduct);
+      localStorage.setItem("cart-list", JSON.stringify(cartList));
+      localStorage.setItem("cart-count", JSON.stringify(cartCount));
+      updateCartCountUI();
+    });
+    parent.append(card);
+  };
+
+  function updateCartCountUI() {
+    let cCount = document.getElementById("cartCount");
+    cCount.innerText = cartCount;
   }
-  localStorage.setItem("CartData", JSON.stringify(cartitems));
+
+  displayProduct();
 });

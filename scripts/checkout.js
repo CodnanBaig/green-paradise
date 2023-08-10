@@ -189,7 +189,23 @@ if (!loggedIn) {
       deliverySection.style.display = "none";
       paymentSection.style.display = "block";
     }
+
+    document.getElementById("d-fName").textContent = userInfo.firstName;
+    document.getElementById("d-lName").textContent = userInfo.lastName;
+    document.getElementById("d-mobile").textContent = userInfo.mobile;
+    document.getElementById("d-email").textContent = userInfo.email;
+    document.getElementById("d-address").textContent = userAdd.address;
+    document.getElementById("d-landmark").textContent = userAdd.landmark;
+    document.getElementById("d-pincode").textContent = userAdd.po;
+    document.getElementById("d-city").textContent = userAdd.city;
+
+    paymentSection.style.display = "block";
   });
+
+  paymentContinueButton.addEventListener("click", () => {
+
+  });
+
 
   paymentBackButton.addEventListener("click", () => {
     paymentSection.style.display = "none";
