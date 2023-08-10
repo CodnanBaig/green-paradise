@@ -1,0 +1,13 @@
+.btn-outline-danger:hover {
+    background-color: #dc3545 !important;
+}
+
+#loginForm, #signupForm {
+    width: 85%;
+}
+
+@media (max-width: 415px) {
+    #loginForm, #signupForm {
+        width: 100%;
+    }
+}

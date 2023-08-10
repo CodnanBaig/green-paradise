@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -34,8 +34,10 @@
     />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
-    <link rel="stylesheet" href="./styles/login.css" />
-    <title>Login | Green Paradise</title>
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/popularProducts.css" />
+    <link rel="stylesheet" href="./styles/checkout.css" />
+    <title>Green Paradise</title>
   </head>
   <body>
     <div class="background">
@@ -84,47 +86,24 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>  
     <section id="top">
-      <div class="container-fluid">
-        <div class="row">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
           <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="container mb-4">
-              <h3 class="heading mt-5">Create an account.</h3>
-              <form id="signupForm" class="form-control">
-                <div class="form-group">
-                  <label for="signupUsername">Username</label>
-                  <input type="text" class="form-control" id="signupUsername" placeholder="Username" required>
-                </div>
-                <div class="form-group mt-2">
-                  <label for="signupEmail">Email</label>
-                  <input type="email" class="form-control" id="signupEmail" placeholder="Email" required>
-                </div>
-                <div class="form-group mt-2">
-                  <label for="signupPassword">Password</label>
-                  <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn catalog-btn mt-2"><a style="color: white;">Sign Up</a></button>
-                <p class="mt-2">Already have an account? <a href="login.html">Login</a></p>
-                <h5>OR</h5>
-                <div class="social-login">
-                  <p>Login with:</p>
-                  <a
-                    style="background: none"
-                    class="btn btn-outline-danger mb-2"
-                    ><i class="fab fa-google"></i> Google</a
-                  >
-                </div>
-              </form>
-              
+            <div
+              class="hero-info d-flex flex-column justify-content-center align-items-start"
+            >
+              <h1 class="heading">Thank You For Shopping With Us</h1>
+              <br />
+              <button class="catalog-btn btn mb-3">
+                <a href="allProducts.html" style="color: white"> Catalog</a>
+              </button>
             </div>
           </div>
-          <div
-            class="col-lg-6 col-md-6 col-sm-12 p-0"
-            style="position: relative; overflow: hidden"
-          >
+          <div class="col-lg-6 col-md-6 col-sm-12 p-0">
             <img
-              src="https://images.pexels.com/photos/4484185/pexels-photo-4484185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="https://images.pexels.com/photos/4065156/pexels-photo-4065156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               class="img-fluid hero"
               alt=""
             />
@@ -133,11 +112,10 @@
       </div>
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <footer class="footer mt-auto py-3 bg-light"></footer>
   </body>
 </html>
-<script type="module" src="./scripts/signin.js"></script>
+<script type="module">
+  import footer from "./components/footer.js";
+  document.querySelector("footer").innerHTML = footer();
+</script>
