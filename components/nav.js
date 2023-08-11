@@ -1,5 +1,5 @@
 let BASEURL = "http://localhost:3000/";
-let singleProduct = JSON.parse(localStorage.getItem("single-product")) || [];
+let singleProduct = JSON.parse(localStorage.getItem("selected-product"));
 
 let getData = async () => {
   try {
@@ -84,8 +84,7 @@ function displaySearchResultsDropdown(results) {
     li.append(img, name, category, price);
 
     li.addEventListener("click", () => {
-      singleProduct.push(product);
-      localStorage.setItem("single-item", JSON.stringify(singleProduct));
+      localStorage.setItem("selected-product", JSON.stringify(product));
       window.location.href = `productDetails.html`;
     });
 
