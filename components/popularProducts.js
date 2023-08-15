@@ -1,6 +1,5 @@
+let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
 
-
-let BASEURL = "http://localhost:3000/";
 let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
 let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
 
@@ -29,13 +28,15 @@ let popularProductsCarousel = async () => {
     card.innerHTML = `
       <div class="product-card">
         <div class="card">
-          <img src="${el.img}" class="card-img-top" alt="Product Image" />
+          <a href="productDetails.html">
+            <img src="${el.img}" class="card-img-top" alt="Product Image" />
+          </a>
           <div class="card-body d-flex justify-content-between">
             <div class="details">
               <h5 class="card-title">${el.name}</h5>
               <p class="card-text">${el.price} RS</p>
             </div>
-            <button class="btn btn-primary buy-btn addCart">
+            <button class="btn btn-primary buy-btn addCart" data-id="${el.id}">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
           </div>
@@ -45,11 +46,20 @@ let popularProductsCarousel = async () => {
 
     let addCart = card.querySelector(".addCart");
     addCart.addEventListener("click", () => {
-      cartCount++;
       cartList.push(el);
+      cartCount = cartList.length;
       localStorage.setItem("cart-list", JSON.stringify(cartList));
       localStorage.setItem("cart-count", JSON.stringify(cartCount));
       updateCartCountUI();
+      console.log(cartCount, cartList)
+      const addToCartEvent = new Event("addToCart");
+      document.dispatchEvent(addToCartEvent);
+    });
+
+    let productImage = card.querySelector(".card-img-top");
+    productImage.addEventListener("click", () => {
+      localStorage.setItem("selected-product", JSON.stringify(el));
+      window.location.href = "productDetails.html";
     });
 
     swiperWrapper.appendChild(card);
@@ -67,9 +77,9 @@ let popularProductsCarousel = async () => {
       },
     },
   });
-
   updateCartCountUI();
 };
+
 
 function updateCartCountUI() {
   let cCount = document.getElementById("cartCount");
@@ -77,3 +87,12 @@ function updateCartCountUI() {
 }
 
 export default popularProductsCarousel;
+
+window.addEventListener("storage", (event) => {
+  if (event.key === "cart-list" || event.key === "cart-count") {
+    cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    cartCount = cartList.length;
+    console.log(cartList)
+    updateCartCountUI();
+  }
+});

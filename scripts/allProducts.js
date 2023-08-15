@@ -11,10 +11,10 @@ popularProductsCarousel();
 document.querySelector("footer").innerHTML = footer();
 document.querySelector("nav").innerHTML = nav();
 
-let BASEURL = "http://localhost:3000/";
+let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
 
 let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
-  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
+let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
 
 let getData = async () => {
   try {
@@ -36,12 +36,16 @@ let displayData = async (prods, page, sortType) => {
   let endIndex = startIndex + productsPerPage;
 
   let filteredData = data.filter((item) => {
-    if (currentCategory === "") {
+    if (Array.isArray(currentCategory) && currentCategory.length > 0) {
+      return currentCategory.includes(item.category);
+    } else if (currentCategory === "") {
       return true;
     } else {
       return item.category === currentCategory;
     }
   });
+
+  let totalPages = Math.ceil(filteredData.length / productsPerPage);
 
   if (sortType === "asc") {
     filteredData.sort((a, b) => a.price - b.price);
@@ -77,10 +81,11 @@ let displayData = async (prods, page, sortType) => {
     buyButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`;
 
     buyButton.addEventListener("click", () => {
-      cartCount++;
       cartList.push(el);
+      cartCount = cartList.length;
       localStorage.setItem("cart-list", JSON.stringify(cartList));
       localStorage.setItem("cart-count", JSON.stringify(cartCount));
+      console.log(cartCount, cartList);
       updateCartCountUI();
     });
 
@@ -92,6 +97,8 @@ let displayData = async (prods, page, sortType) => {
 
     parent.appendChild(card);
   }
+
+  updatePaginationButtons(totalPages, currentPage);
 };
 
 function updateCartCountUI() {
@@ -108,14 +115,27 @@ sortDropdown.addEventListener("change", () => {
 let categoryCheckboxes = document.querySelectorAll(".form-check-input");
 categoryCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", () => {
-    if (checkbox.checked) {
-      currentCategory = checkbox.value;
+    const selectedCategories = Array.from(categoryCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    if (selectedCategories.length > 0) {
+      currentCategory = selectedCategories;
     } else {
       currentCategory = "";
     }
-    loadPage(currentPage);
+
+    displayData(getData(), currentPage, currentSortType);
   });
 });
+
+function clearCategoryFilter() {
+  currentCategory = "";
+  categoryCheckboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+  displayData(getData(), currentPage, currentSortType);
+}
 
 function updatePaginationButtons(totalPages, currentPage) {
   let paginationElement = document.getElementById("paginationButtons");
@@ -130,7 +150,7 @@ function updatePaginationButtons(totalPages, currentPage) {
     button.innerHTML = `<a class="page-link" href="#">${page}</a>`;
     button.addEventListener("click", () => {
       currentPage = page;
-      displayData(getData(), currentPage);
+      displayData(getData(), currentPage, currentSortType);
       updatePaginationButtons(totalPages, currentPage);
     });
     paginationElement.appendChild(button);
@@ -140,7 +160,7 @@ function updatePaginationButtons(totalPages, currentPage) {
 function loadInitialPage() {
   getData().then((data) => {
     let totalPages = Math.ceil(data.length / productsPerPage);
-    displayData(data, currentPage);
+    displayData(data, currentPage, currentSortType);
     updatePaginationButtons(totalPages, currentPage);
   });
 }

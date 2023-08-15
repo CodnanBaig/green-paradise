@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/login.css" />
-    <title>Login | Green Paradise</title>
+    <title>Sign Up | Green Paradise</title>
   </head>
   <body>
     <div class="background">
@@ -94,29 +94,51 @@
               <form id="signupForm" class="form-control">
                 <div class="form-group">
                   <label for="signupUsername">Username</label>
-                  <input type="text" class="form-control" id="signupUsername" placeholder="Username" required>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="signupUsername"
+                    placeholder="Username"
+                    required
+                  />
                 </div>
                 <div class="form-group mt-2">
                   <label for="signupEmail">Email</label>
-                  <input type="email" class="form-control" id="signupEmail" placeholder="Email" required>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="signupEmail"
+                    placeholder="Email"
+                    required
+                  />
                 </div>
                 <div class="form-group mt-2">
                   <label for="signupPassword">Password</label>
-                  <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="signupPassword"
+                    placeholder="Password"
+                    required
+                  />
                 </div>
-                <button type="submit" class="btn catalog-btn mt-2"><a style="color: white;">Sign Up</a></button>
-                <p class="mt-2">Already have an account? <a href="login.html">Login</a></p>
+                <button type="submit" class="btn catalog-btn mt-2">
+                  <a style="color: white">Sign Up</a>
+                </button>
+                <p class="mt-2">
+                  Already have an account? <a href="login.html">Login</a>
+                </p>
                 <h5>OR</h5>
                 <div class="social-login">
                   <p>Login with:</p>
                   <a
+                    id="googleSignInButton"
                     style="background: none"
                     class="btn btn-outline-danger mb-2"
                     ><i class="fab fa-google"></i> Google</a
                   >
                 </div>
               </form>
-              
             </div>
           </div>
           <div

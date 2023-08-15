@@ -1,5 +1,4 @@
-let BASEURL = "http://localhost:3000/";
-let singleProduct = JSON.parse(localStorage.getItem("selected-product"));
+let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
 
 let getData = async () => {
   try {
@@ -10,6 +9,12 @@ let getData = async () => {
     throw err;
   }
 };
+
+let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
+let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+let cCount = document.getElementById("cartCount");
+let userData = JSON.parse(localStorage.getItem("userData"));
+let loggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
 function debounce(func, delay) {
   let timeoutId;
@@ -94,18 +99,15 @@ function displaySearchResultsDropdown(results) {
   dropdown.appendChild(ul);
 }
 
-let nav = () => {
-  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
-  let cCount = document.getElementById("cartCount");
-  let userData = JSON.parse(localStorage.getItem("userData")); 
-  let loggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
+let nav = () => {
   console.log(userData, loggedIn);
   document.addEventListener("updateCartCount", (event) => {
-    cartCount = event.detail.cartCount;
+    cartCount = cartList.length;
     cCount.innerText = cartCount;
+    console.log(cartCount)
   });
-  
+
   let navContent = `<div class="container">
     <a class="navbar-brand" href="index.html">Green paradise</a>
     <button
@@ -133,7 +135,6 @@ let nav = () => {
       </ul>`;
 
   if (loggedIn) {
-    // If user is logged in, show username
     navContent += `
     <div class="btn-group mx-2">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -144,7 +145,6 @@ let nav = () => {
         </ul>
       </div>`;
   } else {
-    // If user is not logged in, show profile icon and login/signup options
     navContent += `
       <div class="btn-group mx-2">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,6 +175,10 @@ let nav = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#logout").addEventListener("click", () => {
+    loggedIn = false;
+    localStorage.setItem("isLoggedIn", JSON.stringify(loggedIn))
+  });
   let searchIcon = document.getElementById("searchIcon");
 
   searchIcon.addEventListener("click", () => {

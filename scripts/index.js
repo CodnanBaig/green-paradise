@@ -7,7 +7,7 @@ document.querySelector("footer").innerHTML = footer();
 document.querySelector("nav").innerHTML = nav();
 
 
-let BASEURL = "http://localhost:3000/";
+let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
 
 let getData = async () => {
   try {

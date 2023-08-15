@@ -43,8 +43,8 @@ selectedCategory.forEach((el) => {
 
   let addCart = card.querySelector(".addCart");
   addCart.addEventListener("click", () => {
-    cartCount++;
     cartList.push(el);
+    cartCount = cartList.length;
     localStorage.setItem("cart-list", JSON.stringify(cartList));
     localStorage.setItem("cart-count", JSON.stringify(cartCount));
     updateCartCountUI();
@@ -86,7 +86,7 @@ function loadPage(page) {
   cont.innerHTML = "";
 
   currentPageProducts.forEach((el) => {
-    let card = document.createElement("div"); // Move this line here
+    let card = document.createElement("div"); 
     card.setAttribute("class", "col-lg-4 col-md-4 col-sm-6 col-xs-6");
 
     card.innerHTML = `<div class="product-card">
@@ -106,8 +106,8 @@ function loadPage(page) {
 
     let addCart = card.querySelector(".addCart");
     addCart.addEventListener("click", () => {
-      cartCount++;
       cartList.push(el);
+      cartCount = cartList.length;
       localStorage.setItem("cart-list", JSON.stringify(cartList));
       localStorage.setItem("cart-count", JSON.stringify(cartCount));
       updateCartCountUI();
