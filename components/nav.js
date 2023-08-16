@@ -1,4 +1,5 @@
 let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
+let singleProduct = JSON.parse(localStorage.getItem("single-product")) || [];
 
 let getData = async () => {
   try {
@@ -9,12 +10,6 @@ let getData = async () => {
     throw err;
   }
 };
-
-let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
-let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
-let cCount = document.getElementById("cartCount");
-let userData = JSON.parse(localStorage.getItem("userData"));
-let loggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
 function debounce(func, delay) {
   let timeoutId;
@@ -52,10 +47,10 @@ function displaySearchResultsDropdown(results) {
   }
 
   let hideButton = document.createElement("button");
-  hideButton.textContent = "Hide Results";
+  hideButton.textContent = "Hide Results"; 
   hideButton.className = "hide-results-button btn btn-outline";
   hideButton.addEventListener("click", () => {
-    dropdown.style.display = "none";
+    dropdown.style.display = "none"; 
   });
 
   dropdown.appendChild(hideButton);
@@ -71,7 +66,7 @@ function displaySearchResultsDropdown(results) {
     li.className = "search-result-item";
 
     let img = document.createElement("img");
-    img.src = product.img;
+    img.src = product.img; 
     img.alt = product.name;
     img.className = "search-result-image";
 
@@ -80,16 +75,18 @@ function displaySearchResultsDropdown(results) {
     name.className = "search-result-name";
 
     let category = document.createElement("small");
-    category.textContent = product.category;
+    category.textContent = product.category
 
     let price = document.createElement("p");
     price.textContent = `$${product.price}RS`;
     price.className = "search-result-price";
 
+    
     li.append(img, name, category, price);
 
     li.addEventListener("click", () => {
-      localStorage.setItem("selected-product", JSON.stringify(product));
+      singleProduct.push(product);
+      localStorage.setItem("single-item", JSON.stringify(singleProduct));
       window.location.href = `productDetails.html`;
     });
 
@@ -99,86 +96,90 @@ function displaySearchResultsDropdown(results) {
   dropdown.appendChild(ul);
 }
 
-
 let nav = () => {
-  console.log(userData, loggedIn);
+  let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
+  let cCount = document.getElementById("cartCount");
+  let userData = JSON.parse(localStorage.getItem("userData"));
+  let loggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
+
   document.addEventListener("updateCartCount", (event) => {
-    cartCount = cartList.length;
+    cartCount = event.detail.cartCount;
     cCount.innerText = cartCount;
-    console.log(cartCount)
   });
 
-  let navContent = `<div class="container">
-    <a class="navbar-brand" href="index.html">Green paradise</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="allProducts.html">Catalog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#delivery" tabindex="-1" aria-disabled="true">Delivery & Payment</a>
-        </li>
-      </ul>`;
-
-  if (loggedIn) {
-    navContent += `
-    <div class="btn-group mx-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 0px;">
-        <span class="navbar-text pe-2">${userData[0].username}</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" id="logout" href="index.html">Logout</a></li>
+  return `
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Green paradise</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="allProducts.html">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#delivery" tabindex="-1" aria-disabled="true">Delivery & Payment</a>
+          </li>
         </ul>
-      </div>`;
-  } else {
-    navContent += `
-      <div class="btn-group mx-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-user-circle"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="login.html">Login</a></li>
-          <li><a class="dropdown-item" href="signin.html">Sign Up</a></li>
-        </ul>
-      </div>`;
-  }
-
-  navContent += `
-    <span class="navbar-text">
-      <span id="cartCount" class="cart-count bg-success p-1 rounded-pill" style="color: white;">${cartCount}</span>
-      <a style="color: black" href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
-    </span>
-    <span class="navbar-text d-flex mt-2">
-      <i id="searchIcon" class="fa-solid fa-search"></i>
-      <div id="searchBar" class="ps-2 search-bar">
-        <input type="text" class="search" id="s-input" placeholder="Search" style="width: 100%; border: none; border-bottom: 1px solid; padding-left: 10px;">
+        ${loggedIn ? `
+        <div class="btn-group mx-2">
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="navbar-text pe-2">${userData[0].username}</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+          </ul>
+        </div>` : `
+        <div class="btn-group mx-2">
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-user-circle"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+          </ul>
+        </div>`}
+        <span class="navbar-text">
+          <span id="cartCount" class="cart-count bg-success p-1 rounded-pill" style="color: white;">${cartCount}</span>
+          <a style="color: black" href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
+        </span>
+        <span class="navbar-text d-flex mx-2 mt-2">
+          <i id="searchIcon" class="fa-solid fa-search"></i>
+          <div id="searchBar" class="ps-2 search-bar">
+            <input type="text" class="search" id="s-input" placeholder="Search" style="width: 100%; border: none; border-bottom: 1px solid; padding-left: 10px;">
+          </div>
+        </span>
+        <div id="searchResultsDropdown"></div>
       </div>
-    </span>
-    <div id="searchResultsDropdown"></div>
-  </div>
-</div>`;
-  return navContent;
+    </div>`;
 };
 
+// Rest of your code remains unchanged...
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#logout").addEventListener("click", () => {
-    loggedIn = false;
-    localStorage.setItem("isLoggedIn", JSON.stringify(loggedIn))
-  });
   let searchIcon = document.getElementById("searchIcon");
 
   searchIcon.addEventListener("click", () => {
