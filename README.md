@@ -12,6 +12,7 @@
 ## Introduction
 
 This is an ecom store that sells Planting products exclusively. We are doing this as a group project given to us by Masai School to hone our Front-End skills.
+The entire website is fully responsive accross all the screens. This was made easy by using Bootstrap. 
 
 ## Tech Stack
 
