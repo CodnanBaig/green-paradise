@@ -112,7 +112,7 @@ function updatePaymentAmount() {
 
 function createRazorpayInstance() {
   return new Razorpay(options);
-  options.amount = totalAmount * 100;
+  options.amount = (totalAmount+100) * 100;
 }
 
 function updatePaymentDetails() {
