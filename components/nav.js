@@ -137,7 +137,7 @@ let nav = () => {
   if (loggedIn) {
     navContent += `
     <div class="btn-group mx-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 0px;">
         <span class="navbar-text pe-2">${userData[0].username}</span>
         </button>
         <ul class="dropdown-menu">
@@ -162,7 +162,7 @@ let nav = () => {
       <span id="cartCount" class="cart-count bg-success p-1 rounded-pill" style="color: white;">${cartCount}</span>
       <a style="color: black" href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
     </span>
-    <span class="navbar-text d-flex mx-2 mt-2">
+    <span class="navbar-text d-flex mt-2">
       <i id="searchIcon" class="fa-solid fa-search"></i>
       <div id="searchBar" class="ps-2 search-bar">
         <input type="text" class="search" id="s-input" placeholder="Search" style="width: 100%; border: none; border-bottom: 1px solid; padding-left: 10px;">

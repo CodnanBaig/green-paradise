@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
   let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;
 
+  document.title = "Green Paradise | " + selectedProduct.name;
   let displayProduct = () => {
     let parent = document.getElementById("product");
     let card = document.createElement("div");

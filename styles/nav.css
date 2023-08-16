@@ -69,6 +69,14 @@
   display: block;
 }
 
+.nav-link {
+  text-align: left;
+}
+
+.btn-group {
+  margin-left: 0px !important;
+}
+
 @media (max-width: 415px) {
   #searchResultsDropdown {
     width: 100%;
