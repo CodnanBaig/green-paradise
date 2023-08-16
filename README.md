@@ -23,6 +23,7 @@ The entire website is fully responsive accross all the screens. This was made ea
 - SwiperJS
 - Firebase
 - RazorPay
+- Json Server
 
 ## Features
 
