@@ -14,6 +14,10 @@
 This is an ecom store that sells Planting products exclusively. We are doing this as a group project given to us by Masai School to hone our Front-End skills.
 The entire website is fully responsive accross all the screens. This was made easy by using Bootstrap. 
 
+## Deployed Link
+
+https://visionary-macaron-48c9d9.netlify.app/
+
 ## Tech Stack
 
 - HTML
@@ -23,6 +27,7 @@ The entire website is fully responsive accross all the screens. This was made ea
 - SwiperJS
 - Firebase
 - RazorPay
+- Json Server
 
 ## Features
 
