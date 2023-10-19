@@ -1,4 +1,4 @@
-let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
+let BASEURL = "https://erin-smoggy-worm.cyclic.app";
 
 let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
 let cartCount = JSON.parse(localStorage.getItem("cart-count")) || 0;

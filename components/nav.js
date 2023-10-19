@@ -1,4 +1,4 @@
-let BASEURL = "https://teal-elephant-toga.cyclic.cloud/";
+let BASEURL = "https://erin-smoggy-worm.cyclic.app";
 let singleProduct = JSON.parse(localStorage.getItem("single-product")) || [];
 
 let getData = async () => {
@@ -175,8 +175,6 @@ let nav = () => {
       </div>
     </div>`;
 };
-
-// Rest of your code remains unchanged...
 
 
 document.addEventListener("DOMContentLoaded", () => {
