@@ -1,4 +1,4 @@
-let BASEURL = "https://erin-smoggy-worm.cyclic.app";
+let BASEURL = "https://erin-smoggy-worm.cyclic.app/";
 let singleProduct = JSON.parse(localStorage.getItem("single-product")) || [];
 
 let getData = async () => {
