@@ -16,7 +16,7 @@ The entire website is fully responsive accross all the screens. This was made ea
 
 ## Deployed Link
 
-https://visionary-macaron-48c9d9.netlify.app/
+https://green-paradise-plants.netlify.app
 
 ## Tech Stack
 
